@@ -591,6 +591,78 @@ h1 {
   box-shadow: 0 12px 32px rgba(21, 87, 97, 0.1);
 }
 
+.app-screenshot {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  max-height: 320px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: #f8fcfc;
+}
+
+.app-screenshot img {
+  width: auto;
+  max-width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  object-position: top;
+}
+
+.news-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.news-article-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.news-article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(21, 87, 97, 0.1);
+}
+
+.news-article-label {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--aqua-dark);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+}
+
+.news-article-title {
+  flex: 1;
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.news-article-link {
+  flex-shrink: 0;
+  color: var(--aqua-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
 .site-footer {
   display: flex;
   align-items: center;
