@@ -737,7 +737,7 @@ h1 {
     border-radius: 8px;
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(244, 251, 251, 0.78)),
-      url("./assets/hero-riko-fishing.svg") center bottom / cover no-repeat;
+      url("./assets/hero-riko-fishing.svg?v=20260617") center bottom / cover no-repeat;
   }
 
   h1 {
