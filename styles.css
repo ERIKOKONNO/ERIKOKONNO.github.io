@@ -511,7 +511,7 @@ h1 {
 
 .music-panel {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   padding: 28px;
@@ -521,9 +521,26 @@ h1 {
   box-shadow: 0 10px 28px rgba(21, 87, 97, 0.06);
 }
 
+.music-artist {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  column-gap: 16px;
+  align-items: center;
+}
+
+.music-artist img {
+  grid-row: span 2;
+  width: 76px;
+  height: 76px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(20, 59, 77, 0.12);
+}
+
 .music-label {
   display: block;
-  margin-bottom: 10px;
+  margin: 0 0 4px;
   color: var(--aqua-dark);
   font-family: "Outfit", sans-serif;
   font-size: 0.78rem;
@@ -534,7 +551,7 @@ h1 {
 
 .music-panel h3 {
   font-family: "Outfit", "Noto Sans JP", sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .music-panel p {
@@ -851,6 +868,15 @@ h1 {
   .contact-section {
     margin-bottom: 54px;
     padding: 34px 24px;
+  }
+
+  .music-artist {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .music-artist img {
+    width: 64px;
+    height: 64px;
   }
 
   .site-footer {
