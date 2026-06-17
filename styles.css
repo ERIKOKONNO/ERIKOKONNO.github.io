@@ -563,12 +563,17 @@ h1 {
   color: var(--muted);
 }
 
-.album-card {
+.music-release-grid {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
-  gap: 18px;
-  align-items: center;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.album-card {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 14px;
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -583,8 +588,9 @@ h1 {
 }
 
 .album-card img {
-  width: 112px;
-  height: 112px;
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -829,6 +835,10 @@ h1 {
   .media-grid {
     grid-template-columns: 1fr;
   }
+
+  .music-release-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 620px) {
@@ -923,14 +933,8 @@ h1 {
     height: 64px;
   }
 
-  .album-card {
-    grid-template-columns: 82px minmax(0, 1fr);
-    padding: 14px;
-  }
-
-  .album-card img {
-    width: 82px;
-    height: 82px;
+  .music-release-grid {
+    grid-template-columns: 1fr;
   }
 
   .site-footer {
