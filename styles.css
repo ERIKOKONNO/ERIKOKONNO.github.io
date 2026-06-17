@@ -141,9 +141,18 @@ h3 {
 }
 
 h1 {
-  max-width: 680px;
-  font-size: clamp(2.45rem, 4.7vw, 4.1rem);
-  line-height: 1.16;
+  max-width: 720px;
+  font-size: clamp(2.25rem, 3.45vw, 3.25rem);
+  line-height: 1.22;
+}
+
+.hero-kicker {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font-family: "Outfit", "Noto Sans JP", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .hero-lead {
@@ -741,7 +750,7 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(2.35rem, 13vw, 4.2rem);
+    font-size: clamp(2rem, 9.2vw, 3rem);
   }
 
   .hero-lead {
