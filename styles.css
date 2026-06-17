@@ -582,50 +582,6 @@ h1 {
   letter-spacing: 0.01em;
 }
 
-.scenes-section {
-  border-top: 1px solid var(--line);
-}
-
-.scene-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.scene-card {
-  overflow: hidden;
-  margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #ffffff;
-  box-shadow: 0 18px 54px rgba(21, 87, 97, 0.08);
-}
-
-.scene-card img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.scene-card.tall img {
-  aspect-ratio: 3 / 4;
-}
-
-.scene-card.wide img {
-  aspect-ratio: 16 / 7;
-}
-
-.scene-card.wide {
-  grid-column: 1 / -1;
-}
-
-.scene-card figcaption {
-  min-height: 72px;
-  padding: 16px 18px;
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.65;
-}
-
 .media-card {
   transition: box-shadow 160ms ease, transform 160ms ease;
 }
@@ -753,7 +709,6 @@ h1 {
 
   .focus-grid,
   .app-list,
-  .scene-grid,
   .media-grid {
     grid-template-columns: 1fr;
   }
@@ -782,7 +737,7 @@ h1 {
     border-radius: 8px;
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(244, 251, 251, 0.78)),
-      url("./assets/hero-fishing-app.svg") center bottom / cover no-repeat;
+      url("./assets/hero-riko-fishing.svg") center bottom / cover no-repeat;
   }
 
   h1 {
