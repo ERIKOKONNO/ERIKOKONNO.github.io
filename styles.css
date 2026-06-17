@@ -485,6 +485,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 7px;
   min-height: 30px;
   padding: 0 10px;
   border-radius: 6px;
@@ -493,6 +494,41 @@ h1 {
   font-family: "Outfit", sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.media-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.media-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.media-icon svg rect,
+.media-icon svg circle {
+  fill: none;
+}
+
+.youtube-icon svg path {
+  fill: currentColor;
+  stroke: none;
+}
+
+.yahoo-icon {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .media-card h3 {
