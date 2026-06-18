@@ -282,45 +282,6 @@ h1 {
   object-fit: cover;
 }
 
-.status-card {
-  position: absolute;
-  right: 22px;
-  bottom: 22px;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: min(300px, calc(100% - 44px));
-  padding: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 8px;
-  color: #ffffff;
-  background: rgba(22, 59, 80, 0.68);
-  backdrop-filter: blur(18px);
-}
-
-.status-card p {
-  margin: 0 0 2px;
-  font-family: "Outfit", sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.status-card strong {
-  display: block;
-  font-size: 0.96rem;
-  line-height: 1.4;
-}
-
-.status-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--sun);
-  flex: 0 0 auto;
-}
-
 .section {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
@@ -1214,15 +1175,6 @@ h1 {
 
   .hero-visual::after {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(16, 54, 83, 0.1));
-  }
-
-  .status-card {
-    right: 14px;
-    bottom: 14px;
-    width: auto;
-    max-width: calc(100% - 28px);
-    padding: 10px 12px;
-    border-radius: 8px;
   }
 
   .section {
