@@ -32,6 +32,10 @@ body {
   line-height: 1.8;
 }
 
+main#top {
+  scroll-margin-top: 112px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -78,6 +82,25 @@ img {
   letter-spacing: 0;
 }
 
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.04rem;
+  font-weight: 800;
+}
+
+.brand-subtitle {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
 .brand-mark {
   display: grid;
   place-items: center;
@@ -90,6 +113,10 @@ img {
 
 .site-nav {
   gap: 4px;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 .site-nav a {
@@ -147,6 +174,10 @@ h1 {
   font-size: clamp(2rem, 3.55vw, 2.72rem);
   line-height: 1.32;
   letter-spacing: 0.01em;
+}
+
+.mobile-break {
+  display: none;
 }
 
 .hero-kicker {
@@ -960,6 +991,59 @@ h1 {
     display: none;
   }
 
+  .mobile-nav {
+    display: block;
+    position: relative;
+    margin-left: auto;
+  }
+
+  .mobile-nav summary {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 10px 28px rgba(16, 54, 83, 0.07);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-nav summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-nav summary span {
+    width: 20px;
+    height: 2px;
+    margin: 2px 0;
+    border-radius: 999px;
+    background: var(--navy);
+  }
+
+  .mobile-nav-panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 12px);
+    z-index: 30;
+    display: grid;
+    min-width: 180px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 18px 40px rgba(16, 54, 83, 0.14);
+  }
+
+  .mobile-nav-panel a {
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: var(--navy);
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+  }
+
   .hero,
   .about-section {
     grid-template-columns: 1fr;
@@ -994,7 +1078,6 @@ h1 {
 }
 
 @media (max-width: 620px) {
-  .site-header,
   .hero,
   .section,
   .proof-strip,
@@ -1004,28 +1087,100 @@ h1 {
   }
 
   .site-header {
-    margin-top: 12px;
+    position: sticky;
+    width: 100%;
+    min-height: 104px;
+    margin: 0;
+    padding: 26px 28px 22px;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.96);
+  }
+
+  .site-header::before {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4px;
+    content: "";
+    background: linear-gradient(90deg, var(--sun), #eeb3ca 42%, var(--aqua));
   }
 
   .brand-mark {
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand {
+    gap: 12px;
+  }
+
+  .brand-name {
+    font-size: 1.34rem;
+    letter-spacing: 0.12em;
+  }
+
+  .brand-subtitle {
+    font-size: 0.76rem;
+  }
+
+  .mobile-nav summary {
+    width: 58px;
+    height: 58px;
   }
 
   .hero {
-    padding: 42px 0 58px;
-    border-radius: 8px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(244, 251, 251, 0.78)),
-      url("./assets/hero-riko-fishing.svg?v=20260617") center bottom / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    padding: 34px 0 56px;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .hero-copy {
+    order: 2;
+  }
+
+  .hero-copy > .eyebrow {
+    display: none;
+  }
+
+  .hero-kicker {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 24px;
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.08rem;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .hero-kicker::before {
+    display: block;
+    width: 42px;
+    height: 2px;
+    background: var(--navy);
+    content: "";
   }
 
   h1 {
-    font-size: clamp(1.9rem, 8.2vw, 2.55rem);
+    font-size: clamp(2.15rem, 9.4vw, 2.5rem);
+    line-height: 1.22;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .mobile-break {
+    display: block;
   }
 
   .hero-lead {
-    font-size: 1rem;
+    margin-top: 24px;
+    color: #536474;
+    font-size: 1.08rem;
+    line-height: 2;
   }
 
   .hero-actions,
@@ -1037,10 +1192,37 @@ h1 {
 
   .button {
     width: 100%;
+    min-height: 58px;
+    border-radius: 8px;
+    font-size: 1.05rem;
   }
 
   .hero-visual {
-    display: none;
+    order: 1;
+    display: block;
+    width: 100%;
+    min-height: 305px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 28px;
+    box-shadow: 0 22px 42px rgba(16, 54, 83, 0.12);
+  }
+
+  .hero-visual img {
+    min-height: 305px;
+    object-position: 58% center;
+  }
+
+  .hero-visual::after {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(16, 54, 83, 0.1));
+  }
+
+  .status-card {
+    right: 14px;
+    bottom: 14px;
+    width: auto;
+    max-width: calc(100% - 28px);
+    padding: 10px 12px;
+    border-radius: 8px;
   }
 
   .section {

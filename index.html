@@ -15,7 +15,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./assets/hero-riko-fishing.svg?v=20260617" />
-    <link rel="stylesheet" href="./styles.css?v=20260618-polish2" />
+    <link rel="stylesheet" href="./styles.css?v=20260618-mobile-polish2" />
     <style>
       .brand-mark {
         overflow: hidden;
@@ -56,7 +56,10 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="RIKO Official Site">
         <span class="brand-mark"><img src="./assets/riko-profile.svg" alt="" /></span>
-        <span>RIKO</span>
+        <span class="brand-text">
+          <span class="brand-name">RIKO</span>
+          <span class="brand-subtitle">Official Site</span>
+        </span>
       </a>
       <nav class="site-nav" aria-label="メインナビゲーション">
         <a href="#apps">Apps</a>
@@ -65,6 +68,20 @@
         <a href="#music">Music</a>
         <a href="./contact.html">Contact</a>
       </nav>
+      <details class="mobile-nav">
+        <summary aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+          <span></span>
+        </summary>
+        <div class="mobile-nav-panel">
+          <a href="#apps">Apps</a>
+          <a href="#about">About</a>
+          <a href="#media">Media</a>
+          <a href="#music">Music</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </details>
     </header>
 
     <main id="top">
@@ -73,8 +90,8 @@
           <p class="eyebrow">RIKO OFFICIAL SITE</p>
           <p class="hero-kicker">Make fishing easier for everyone.</p>
           <h1 id="hero-title">
-            釣りの「わからない」を、<br />
-            未来の「あたりまえ」に。
+            釣りの<br class="mobile-break" />「わからない」を、<br />
+            未来の<br class="mobile-break" />「あたりまえ」に。
           </h1>
           <p class="hero-lead">
             都会で疲れていた私が、地元の海と川、広い空に救われたことが発信の原点です。<br />
