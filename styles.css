@@ -297,14 +297,14 @@ h1 {
 
 .button.primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--indigo) 0%, var(--indigo-dark) 100%);
-  box-shadow: 0 6px 22px var(--indigo-glow);
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+  box-shadow: 0 6px 22px rgba(14, 165, 201, 0.3);
 }
 
 .button.primary:hover,
 .button.primary:focus-visible {
-  background: linear-gradient(135deg, #4752c4 0%, #3a40a8 100%);
-  box-shadow: 0 10px 30px rgba(88, 101, 242, 0.35);
+  background: linear-gradient(135deg, var(--teal-dark) 0%, #016d8e 100%);
+  box-shadow: 0 10px 30px rgba(14, 165, 201, 0.4);
 }
 
 .button.secondary {
@@ -1091,8 +1091,8 @@ h1 {
 }
 
 .contact-section .button.primary {
-  background: linear-gradient(135deg, var(--indigo) 0%, var(--indigo-dark) 100%);
-  box-shadow: 0 6px 22px rgba(88, 101, 242, 0.4);
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+  box-shadow: 0 6px 22px rgba(14, 165, 201, 0.4);
 }
 
 .contact-section .button.secondary {
@@ -1166,7 +1166,7 @@ h1 {
 }
 
 .hero-stat strong {
-  color: var(--ink);
+  color: var(--navy);
   font-family: "Outfit", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
