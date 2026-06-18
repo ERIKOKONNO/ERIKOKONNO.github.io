@@ -25,7 +25,8 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(180deg, rgba(244, 248, 248, 0.8), rgba(255, 255, 255, 0) 340px),
+    radial-gradient(circle at 85% 8%, rgba(18, 166, 166, 0.1), transparent 280px),
+    linear-gradient(180deg, rgba(244, 248, 248, 0.86), rgba(255, 255, 255, 0) 380px),
     var(--paper);
   font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.8;
@@ -108,12 +109,12 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(390px, 1.08fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(410px, 0.95fr);
+  gap: 56px;
   align-items: center;
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 54px 0 58px;
+  padding: 34px 0 24px;
 }
 
 .eyebrow {
@@ -142,8 +143,8 @@ h3 {
 }
 
 h1 {
-  max-width: 720px;
-  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  max-width: 760px;
+  font-size: clamp(2rem, 3.55vw, 2.72rem);
   line-height: 1.32;
   letter-spacing: 0.01em;
 }
@@ -152,16 +153,17 @@ h1 {
   margin: 0 0 16px;
   color: var(--navy);
   font-family: "Outfit", "Noto Sans JP", sans-serif;
-  font-size: 0.98rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .hero-lead {
   max-width: 620px;
-  margin: 24px 0 0;
+  margin: 22px 0 0;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1rem;
+  line-height: 1.72;
 }
 
 .hero-actions,
@@ -169,7 +171,7 @@ h1 {
 .contact-actions {
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 32px;
+  margin-top: 28px;
 }
 
 .button {
@@ -226,9 +228,9 @@ h1 {
 .hero-visual {
   position: relative;
   overflow: hidden;
-  min-height: 468px;
+  min-height: 440px;
   border-radius: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 24px 60px rgba(16, 54, 83, 0.13);
   isolation: isolate;
 }
 
@@ -245,7 +247,7 @@ h1 {
 .hero-visual img {
   width: 100%;
   height: 100%;
-  min-height: 468px;
+  min-height: 440px;
   object-fit: cover;
 }
 
@@ -294,15 +296,49 @@ h1 {
   padding: 86px 0;
 }
 
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.proof-strip div {
+  padding: 22px 24px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.proof-strip strong {
+  display: block;
+  color: var(--navy);
+  font-family: "Outfit", "Noto Sans JP", sans-serif;
+  font-size: clamp(1.45rem, 2.3vw, 2rem);
+  line-height: 1.1;
+}
+
+.proof-strip span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .section-heading {
   max-width: 740px;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 }
 
 .section-heading h2,
 .about-copy h2,
 .contact-section h2 {
-  font-size: clamp(1.7rem, 2.8vw, 2.25rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.55rem);
   letter-spacing: 0.01em;
 }
 
@@ -329,7 +365,8 @@ h1 {
 }
 
 .focus-grid article {
-  padding: 24px;
+  padding: 28px;
+  box-shadow: 0 10px 28px rgba(18, 166, 166, 0.06);
 }
 
 .number {
@@ -343,7 +380,7 @@ h1 {
 
 .focus-grid h3,
 .media-card h3 {
-  font-size: 1.12rem;
+  font-size: 1.16rem;
 }
 
 .focus-grid p,
@@ -365,7 +402,9 @@ h1 {
   max-width: none;
   padding-right: max(20px, calc((100vw - 1120px) / 2));
   padding-left: max(20px, calc((100vw - 1120px) / 2));
-  background: var(--wash);
+  background:
+    linear-gradient(180deg, rgba(223, 248, 246, 0.62), rgba(243, 251, 251, 0.92)),
+    var(--wash);
 }
 
 .app-list {
@@ -378,7 +417,7 @@ h1 {
   display: grid;
   grid-template-columns: 86px minmax(0, 1fr);
   gap: 20px;
-  padding: 26px;
+  padding: 30px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -417,24 +456,43 @@ h1 {
 }
 
 .app-card h3 {
-  font-size: 1.35rem;
+  font-size: 1.55rem;
 }
 
 .app-card p:not(.app-status) {
   margin: 14px 0 0;
 }
 
+.app-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app-points li {
+  padding: 5px 10px;
+  border: 1px solid rgba(18, 166, 166, 0.22);
+  border-radius: 999px;
+  color: var(--aqua-dark);
+  background: var(--mint);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .about-section {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 48px;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 56px;
   align-items: center;
 }
 
 .portrait-card {
   overflow: hidden;
   display: grid;
-  min-height: 430px;
+  min-height: 500px;
   place-items: center;
   border-radius: 8px;
   background:
@@ -460,6 +518,55 @@ h1 {
 .about-copy p {
   margin: 18px 0 0;
   font-size: 1rem;
+}
+
+.about-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 8px;
+}
+
+.about-facts span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 6px;
+  color: var(--navy);
+  background: var(--wash);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.story-section {
+  border-top: 1px solid var(--line);
+}
+
+.story-panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.story-panel > div {
+  min-height: 250px;
+  padding: 30px;
+  background: #ffffff;
+}
+
+.story-panel h3 {
+  font-size: 1.22rem;
+}
+
+.story-panel p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.96rem;
 }
 
 .media-section {
@@ -872,8 +979,13 @@ h1 {
   .focus-grid,
   .app-list,
   .music-panel,
-  .media-grid {
+  .media-grid,
+  .story-panel {
     grid-template-columns: 1fr;
+  }
+
+  .proof-strip {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .music-release-grid {
@@ -885,6 +997,7 @@ h1 {
   .site-header,
   .hero,
   .section,
+  .proof-strip,
   .contact-section,
   .site-footer {
     width: min(100% - 28px, 1120px);
@@ -908,7 +1021,7 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(1.7rem, 7.5vw, 2.35rem);
+    font-size: clamp(1.9rem, 8.2vw, 2.55rem);
   }
 
   .hero-lead {
@@ -934,6 +1047,18 @@ h1 {
     padding: 66px 0;
   }
 
+  .proof-strip {
+    margin-bottom: 0;
+  }
+
+  .proof-strip div {
+    padding: 18px 16px;
+  }
+
+  .proof-strip strong {
+    font-size: 1.45rem;
+  }
+
   .apps-section {
     padding-right: 14px;
     padding-left: 14px;
@@ -952,6 +1077,15 @@ h1 {
 
   .portrait-card {
     min-height: 320px;
+  }
+
+  .portrait-card img {
+    min-height: 320px !important;
+  }
+
+  .story-panel > div {
+    min-height: auto;
+    padding: 24px;
   }
 
   .news-list article {
