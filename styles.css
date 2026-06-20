@@ -7,19 +7,19 @@
   color-scheme: light;
 
   /* Core palette */
-  --ink: #12344a;
-  --ink-mid: #1e4060;
-  --muted: #60717d;
-  --line: #d9eeee;
+  --ink: #2a2a35;
+  --ink-mid: #3d3d4a;
+  --muted: #6b6b78;
+  --line: #e8e0e2;
   --paper: #ffffff;
-  --wash: #f3fbfb;
-  --pale: #e4f4f5;
+  --wash: #faf5f6;
+  --pale: #f5eced;
 
-  /* Brand colors — original teal */
-  --aqua: #12a6a6;
-  --aqua-dark: #0c8f91;
-  --aqua-glow: rgba(18, 166, 166, 0.18);
-  --mint: #dff8f6;
+  /* Brand colors — warm coral / rose */
+  --aqua: #d4727a;
+  --aqua-dark: #c0616a;
+  --aqua-glow: rgba(212, 114, 122, 0.16);
+  --mint: #fdf0f1;
 
   /* Warm accent — status dot only */
   --sun: #ff8a1c;
@@ -129,7 +129,7 @@ main#top { scroll-margin-top: 72px; }
 
 /* === HERO === */
 .hero-bg {
-  background: linear-gradient(180deg, #eef6f6 0%, #f4f9f9 40%, var(--paper) 100%);
+  background: linear-gradient(180deg, #f8f0f1 0%, #fbf6f7 40%, var(--paper) 100%);
 }
 
 .hero {
@@ -200,12 +200,12 @@ h1 {
 .button.primary {
   color: #fff;
   background: linear-gradient(135deg, var(--aqua) 0%, var(--aqua-dark) 100%);
-  box-shadow: 0 8px 20px rgba(18, 166, 166, 0.22);
+  box-shadow: 0 8px 20px rgba(212, 114, 122, 0.22);
 }
 
 .button.primary:hover, .button.primary:focus-visible {
   background: linear-gradient(135deg, var(--aqua-dark) 0%, var(--navy) 100%);
-  box-shadow: 0 12px 28px rgba(18, 166, 166, 0.28);
+  box-shadow: 0 12px 28px rgba(212, 114, 122, 0.28);
 }
 
 .button.secondary {
@@ -302,7 +302,7 @@ h1 {
   width: 100%;
   max-width: none;
   padding: 88px max(24px, calc((100vw - 1120px) / 2));
-  background: linear-gradient(180deg, #f0f8f8 0%, var(--wash) 50%, var(--paper) 100%);
+  background: linear-gradient(180deg, var(--wash) 0%, var(--pale) 30%, var(--paper) 100%);
 }
 
 .app-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
@@ -322,8 +322,8 @@ h1 {
 .app-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 
 .app-card.featured {
-  border-color: rgba(18, 166, 166, 0.36);
-  background: linear-gradient(160deg, rgba(18, 166, 166, 0.04), var(--paper) 60%);
+  border-color: rgba(212, 114, 122, 0.30);
+  background: linear-gradient(160deg, rgba(212, 114, 122, 0.04), var(--paper) 60%);
 }
 
 .app-icon { display: grid; place-items: center; width: 90px; height: 90px; border-radius: 22px; color: #fff; }
@@ -337,7 +337,7 @@ h1 {
 
 .app-points li {
   padding: 5px 12px;
-  border: 1.5px solid rgba(18, 166, 166, 0.2);
+  border: 1.5px solid rgba(212, 114, 122, 0.18);
   border-radius: var(--r-full);
   color: var(--aqua-dark);
   background: var(--mint);
@@ -371,7 +371,7 @@ h1 {
   min-height: 500px;
   place-items: center;
   border-radius: var(--r);
-  background: linear-gradient(135deg, rgba(18, 166, 166, 0.1), rgba(255, 138, 28, 0.12)), #f5fbfb;
+  background: linear-gradient(135deg, rgba(212, 114, 122, 0.06), rgba(212, 114, 122, 0.03)), var(--wash);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-md);
 }
@@ -510,7 +510,7 @@ h1 {
   border-radius: var(--r);
   color: #fff;
   background:
-    linear-gradient(120deg, rgba(16, 54, 83, 0.96), rgba(12, 143, 145, 0.9)),
+    linear-gradient(120deg, rgba(42, 42, 53, 0.96), rgba(192, 97, 106, 0.85)),
     var(--navy);
   box-shadow: var(--shadow-lg);
 }
@@ -519,7 +519,7 @@ h1 {
 .contact-section h2 { color: #fff; }
 .contact-section p { max-width: 680px; margin-top: 16px; font-size: 1.02rem; line-height: 1.78; }
 .contact-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.contact-section .button.primary { background: linear-gradient(135deg, var(--aqua) 0%, var(--aqua-dark) 100%); box-shadow: 0 6px 20px rgba(18, 166, 166, 0.35); }
+.contact-section .button.primary { background: linear-gradient(135deg, var(--aqua) 0%, var(--aqua-dark) 100%); box-shadow: 0 6px 20px rgba(212, 114, 122, 0.30); }
 .contact-section .button.primary:hover { background: linear-gradient(135deg, var(--aqua-dark) 0%, var(--navy-2) 100%); }
 .contact-section .button.secondary { color: #fff; border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); box-shadow: none; }
 .contact-section .button.secondary:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.5); }
