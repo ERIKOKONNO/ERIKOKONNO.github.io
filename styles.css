@@ -382,17 +382,25 @@ h1 {
 .media-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 
 .media-card {
+  --card-accent: var(--aqua);
+  --card-accent-light: var(--mint);
   min-height: 230px;
   padding: 24px;
   border: 1px solid var(--line);
+  border-top: 3px solid var(--card-accent);
   border-radius: var(--r);
   background: var(--paper);
   transition: transform var(--t), box-shadow var(--t), border-color var(--t);
 }
 
-.media-card:has(a):hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--aqua); }
+.media-card:has(a):hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--card-accent); border-top-color: var(--card-accent); }
 .media-card h3 { font-size: 1.1rem; margin-top: 20px; color: var(--ink); }
 .media-card p { margin: 12px 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+
+.media-instagram { --card-accent: #E1306C; --card-accent-light: #fce4ec; }
+.media-youtube { --card-accent: #FF0000; --card-accent-light: #ffebee; }
+.media-tiktok { --card-accent: #010101; --card-accent-light: #f0f0f0; }
+.media-yahoo { --card-accent: #ff0033; --card-accent-light: #ffebee; }
 
 .media-label {
   display: inline-flex;
@@ -401,8 +409,8 @@ h1 {
   min-height: 28px;
   padding: 0 10px;
   border-radius: var(--r-xs);
-  color: var(--aqua-dark);
-  background: var(--mint);
+  color: var(--card-accent);
+  background: var(--card-accent-light);
   font-family: "Outfit", sans-serif;
   font-size: 0.77rem;
   font-weight: 700;
@@ -412,20 +420,20 @@ h1 {
 .media-brand-icon {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   margin-bottom: 16px;
-  border: 1px solid var(--line);
+  border: none;
   border-radius: var(--r-sm);
-  color: var(--aqua-dark);
-  background: var(--mint);
+  color: var(--card-accent);
+  background: var(--card-accent-light);
   flex-shrink: 0;
 }
 
-.media-brand-icon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.media-brand-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
 .media-brand-icon svg rect, .media-brand-icon svg circle { fill: none; }
 .media-brand-icon.youtube-icon svg path { fill: currentColor; stroke: none; }
-.media-brand-icon.yahoo-icon { font-family: "Outfit", sans-serif; font-size: 0.92rem; font-weight: 800; }
+.media-brand-icon.yahoo-icon { font-family: "Outfit", sans-serif; font-size: 0.96rem; font-weight: 800; }
 .media-link-row { margin-top: 28px; }
 .text-link { color: var(--aqua-dark); font-weight: 700; border-bottom: 1.5px solid currentColor; padding-bottom: 1px; transition: color var(--t); }
 .text-link:hover { color: var(--aqua); }
