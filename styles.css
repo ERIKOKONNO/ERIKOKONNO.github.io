@@ -402,38 +402,35 @@ h1 {
 .media-tiktok { --card-accent: #010101; --card-accent-light: #f0f0f0; }
 .media-yahoo { --card-accent: #ff0033; --card-accent-light: #ffebee; }
 
-.media-label {
+.media-header {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 28px;
-  padding: 0 10px;
-  border-radius: var(--r-xs);
-  color: var(--card-accent);
+  gap: 0;
   background: var(--card-accent-light);
-  font-family: "Outfit", sans-serif;
-  font-size: 0.77rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-.media-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 4px;
+  border-radius: var(--r-sm);
+  overflow: hidden;
 }
 
 .media-brand-icon {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border: none;
-  border-radius: var(--r-sm);
+  border-radius: 0;
   color: var(--card-accent);
-  background: var(--card-accent-light);
+  background: transparent;
   flex-shrink: 0;
+}
+
+.media-label {
+  padding: 0 12px 0 0;
+  color: var(--card-accent);
+  background: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .media-brand-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
