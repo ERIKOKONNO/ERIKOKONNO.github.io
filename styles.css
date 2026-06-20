@@ -417,12 +417,18 @@ h1 {
   letter-spacing: 0.04em;
 }
 
+.media-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
 .media-brand-icon {
   display: grid;
   place-items: center;
   width: 44px;
   height: 44px;
-  margin-bottom: 16px;
   border: none;
   border-radius: var(--r-sm);
   color: var(--card-accent);
