@@ -403,10 +403,10 @@ h1 {
 .media-card h3 { font-size: 1.1rem; margin-top: 20px; color: var(--ink); }
 .media-card p { margin: 12px 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
 
-.media-instagram { --card-accent: #E1306C; --card-accent-light: #fce4ec; }
-.media-youtube { --card-accent: #FF0000; --card-accent-light: #ffebee; }
-.media-tiktok { --card-accent: #010101; --card-accent-light: #f0f0f0; }
-.media-yahoo { --card-accent: #ff0033; --card-accent-light: #ffebee; }
+.media-instagram { --card-accent: #4a6fa5; --card-accent-light: #f0f3fa; }
+.media-youtube { --card-accent: #4a6fa5; --card-accent-light: #f0f3fa; }
+.media-tiktok { --card-accent: #3a5d90; --card-accent-light: #eaecf2; }
+.media-yahoo { --card-accent: #4a6fa5; --card-accent-light: #f0f3fa; }
 
 .media-header {
   display: inline-flex;
