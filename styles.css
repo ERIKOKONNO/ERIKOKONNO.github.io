@@ -250,31 +250,33 @@ h1 {
 /* === PROOF STRIP === */
 .proof-strip {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
   width: 100%;
   margin: 36px 0 0;
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  background: var(--line);
-  box-shadow: var(--shadow-sm);
 }
 
-.proof-strip div { padding: 24px 28px; background: var(--paper); transition: background var(--t); }
+.proof-strip div {
+  padding: 16px 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  text-align: center;
+  transition: background var(--t);
+}
 .proof-strip div:hover { background: var(--wash); }
 
 .proof-strip strong {
   display: block;
   color: var(--aqua-dark);
   font-family: "Outfit", "Noto Sans JP", sans-serif;
-  font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+  font-size: 1.3rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
-.proof-strip span { display: block; margin-top: 6px; color: var(--muted); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.01em; }
+.proof-strip span { display: block; margin-top: 4px; color: var(--muted); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.01em; }
 
 /* === SECTIONS === */
 .section { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 88px 0; }
@@ -620,8 +622,9 @@ h1 {
   .section { padding: 68px 0; }
   .section-heading { margin-bottom: 32px; }
 
-  .proof-strip div { padding: 18px 16px; }
-  .proof-strip strong { font-size: 1.45rem; }
+  .proof-strip { gap: 10px; }
+  .proof-strip div { padding: 14px 8px; }
+  .proof-strip strong { font-size: 1.1rem; }
   .apps-section { padding-right: 14px; padding-left: 14px; }
   .app-card { grid-template-columns: 1fr; padding: 24px; }
   .app-icon { width: 76px; height: 76px; border-radius: 20px; }
