@@ -128,6 +128,10 @@ main#top { scroll-margin-top: 72px; }
 .site-nav a:hover, .site-nav a:focus-visible { color: var(--ink); background: var(--wash); }
 
 /* === HERO === */
+.hero-bg {
+  background: linear-gradient(180deg, #eef6f6 0%, #f4f9f9 40%, var(--paper) 100%);
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(400px, 0.95fr);
@@ -229,7 +233,7 @@ h1 {
   overflow: hidden;
   min-height: 460px;
   border-radius: var(--r-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 40px rgba(16, 54, 83, 0.10), 0 2px 12px rgba(16, 54, 83, 0.06);
   isolation: isolate;
 }
 
@@ -298,7 +302,7 @@ h1 {
   width: 100%;
   max-width: none;
   padding: 88px max(24px, calc((100vw - 1120px) / 2));
-  background: linear-gradient(180deg, #e8f8f7 0%, var(--wash) 50%, var(--paper) 100%);
+  background: linear-gradient(180deg, #f0f8f8 0%, var(--wash) 50%, var(--paper) 100%);
 }
 
 .app-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
